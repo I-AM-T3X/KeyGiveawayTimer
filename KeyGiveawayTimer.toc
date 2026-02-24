@@ -1,0 +1,16 @@
+## Interface: 120000
+## Title: Key Giveaway Timer
+## Notes: Giveaway countdown timer with minimap button
+## Author: I_AM_T3X
+## Version: 1.0
+## SavedVariables: KeyGiveawayTimerDB
+## OptionalDeps: LibDBIcon-1.0
+
+# Libraries (if you embed them, otherwise install via CurseForge/Wago):
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+
+Core.lua
+Config.lua
