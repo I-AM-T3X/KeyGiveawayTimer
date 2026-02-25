@@ -186,11 +186,20 @@ function KGT:UpdateAppearance()
     self.timerLabel:SetFont(self.db.fontFile, math.max(8, self.db.fontSize * 0.5), "OUTLINE")
     self.digitalTimer:SetFont(self.db.fontFile, self.db.timerFontSize, "OUTLINE")
     
-    -- Set text content
-    self.title:SetText(self.db.titleText or " ")
-    self.subtitle:SetText(self.db.subText or " ")
-    self.title:SetTextColor(self.db.textColor.r, self.db.textColor.g, self.db.textColor.b, self.db.textColor.a)
+    -- Set text content (apply defaults if empty)
+    local titleText = self.db.titleText
+    if not titleText or titleText == "" then
+        titleText = "KEY GIVEAWAY"
+    end
     
+    local subText = self.db.subText
+    if not subText or subText == "" then
+        subText = "Type !giveaway to enter"
+    end
+    
+    self.title:SetText(titleText)
+    self.subtitle:SetText(subText)
+	
     -- Calculate required widths
     local padding = 20
     local minWidth = 280

@@ -2,7 +2,7 @@
 ## Title: Key Giveaway Timer
 ## Notes: Giveaway countdown timer with minimap button
 ## Author: I_AM_T3X
-## Version: 1.0
+## Version: 1.0.1
 ## SavedVariables: KeyGiveawayTimerDB
 ## OptionalDeps: LibDBIcon-1.0
 

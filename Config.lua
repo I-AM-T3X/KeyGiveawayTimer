@@ -200,9 +200,15 @@ function addon:CreateConfig()
     -- Title Text - saves immediately to SavedVariables
     local titleEdit
     titleEdit, yPos = CreateEditBox(textBox, "Title Text", yPos, 420, 12, 
-        KeyGiveawayTimerDB.titleText or "GIVEAWAY TIME!",
+        KeyGiveawayTimerDB.titleText or "KEY GIVEAWAY",
         function(self) 
-            KeyGiveawayTimerDB.titleText = self:GetText()
+            local text = self:GetText()
+            -- FIX: Apply default if empty
+            if text == "" then
+                KeyGiveawayTimerDB.titleText = "KEY GIVEAWAY"
+            else
+                KeyGiveawayTimerDB.titleText = text
+            end
             if KeyGiveawayTimerFrame then
                 KeyGiveawayTimerFrame:UpdateAppearance()
             end
@@ -212,9 +218,15 @@ function addon:CreateConfig()
     -- Subtitle Text - saves immediately to SavedVariables
     local subEdit
     subEdit, _ = CreateEditBox(textBox, "Subtitle Text", yPos, 420, 12,
-        KeyGiveawayTimerDB.subText or "Keys remaining: 5",
+        KeyGiveawayTimerDB.subText or "Type !giveaway to enter",
         function(self)
-            KeyGiveawayTimerDB.subText = self:GetText()
+            local text = self:GetText()
+            -- FIX: Apply default if empty
+            if text == "" then
+                KeyGiveawayTimerDB.subText = "Type !giveaway to enter"
+            else
+                KeyGiveawayTimerDB.subText = text
+            end
             if KeyGiveawayTimerFrame then
                 KeyGiveawayTimerFrame:UpdateAppearance()
             end
