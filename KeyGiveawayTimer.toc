@@ -1,8 +1,8 @@
-## Interface: 120000
+## Interface: 120001, 120005
 ## Title: Key Giveaway Timer
 ## Notes: Giveaway countdown timer with minimap button
 ## Author: I_AM_T3X
-## Version: 1.0.1
+## Version: 1.0.2
 ## SavedVariables: KeyGiveawayTimerDB
 ## OptionalDeps: LibDBIcon-1.0
 
