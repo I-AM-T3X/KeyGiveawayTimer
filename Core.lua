@@ -346,7 +346,7 @@ function KGT:CreateMinimapButton()
     local launcher = LibDataBroker:NewDataObject("KeyGiveawayTimer", {
         type = "launcher",
         text = "Key Giveaway Timer",
-        icon = "Interface\\Icons\\INV_Misc_Key_14",
+        icon = "Interface\\Icons\\INV_Relics_Hourglass",
         OnClick = function(_, button)
             if button == "LeftButton" then
                 if KGT:IsShown() then
@@ -383,8 +383,8 @@ function KGT:CreateFallbackMinimapButton()
     local y = 80 * math.sin(math.rad(angle))
     btn:SetPoint("CENTER", Minimap, "CENTER", x, y)
     
-    btn:SetNormalTexture("Interface\\Icons\\INV_Misc_Key_14")
-    btn:SetPushedTexture("Interface\\Icons\\INV_Misc_Key_14")
+    btn:SetNormalTexture("Interface\\Icons\\INV_Relics_Hourglass")
+    btn:SetPushedTexture("Interface\\Icons\\INV_Relics_Hourglass")
     btn:GetPushedTexture():SetVertexColor(0.8, 0.8, 0.8)
     btn:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight")
     
